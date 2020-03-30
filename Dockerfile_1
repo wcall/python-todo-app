@@ -12,14 +12,9 @@ ADD app.py .
 ADD todos_store.py .
 ADD static/ ./static
 
-# COPY config file
-COPY appdynamics.cfg /appdynamics.cfg
-
-# COPY startup script
-COPY startup.sh /startup.sh
-RUN chmod +x /startup.sh
-
 #ENV FLASK_APP "app.py"
-#CMD ["python", "app.py"]
-ENTRYPOINT ["/startup.sh"]
+CMD ["python", "app.py"]
+
+
+
 
